@@ -34,8 +34,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 void main() {
+
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
@@ -49,21 +49,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MultiBlocProvider(
+    return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => FavouriteCubit()),
         BlocProvider(create: (context) => TaskCubit()),
-       BlocProvider(create: (context) => FactBloc(FactApiService.api))
-
-       
+        BlocProvider(create: (context) => FactBloc(FactApiService.api))
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
-        home:const splashScreen(),
+        home: const SplashScreen(),
       ),
     );
-
   }
 }

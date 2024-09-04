@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:find_me_iti/core/network/api_exception.dart';
-import 'package:find_me_iti/core/network/dio_config.dart';
+import 'package:find_me_iti/feature/random_fact_display/data/dio_config.dart';
 import 'package:find_me_iti/feature/random_fact_display/data/constants.dart';
 
 class FactApiService {

@@ -1,8 +1,8 @@
 
 import 'package:find_me_iti/core/styles/styles.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 
 class Welcome1 extends StatelessWidget {
   const Welcome1({super.key});
@@ -38,9 +38,7 @@ class Welcome1 extends StatelessWidget {
             child: Row(
               children: [
                 Image.asset("images/splashScreen/swipe.png" ,height: 25,width: 25,),
-                Container(
-                  //width: 40,
-                  child: const Text("swipe left",style: Fonts.textStyle3,))
+                const Text("swipe left",style: Fonts.textStyle3,)
               ],
             ),
           )

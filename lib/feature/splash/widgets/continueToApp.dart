@@ -62,19 +62,7 @@ class ContinueToApp extends StatelessWidget {
                 ))),
           )
 
-          // SizedBox(height: 30,),
-          // Container(
-          //   margin: EdgeInsets.only(bottom: 20,left: 220,top: 50),
-          //  // width: 40,
-          //   child: Row(
-          //     children: [
-          //       Image.asset("images/splashScreen/swipe.png" ,height: 25,width: 25,),
-          //       Container(
-          //         //width: 40,
-          //         child: Text("swipe left",style: Fonts.textStyle3,))
-          //     ],
-          //   ),
-          // )
+         
         ],
       ),
     );

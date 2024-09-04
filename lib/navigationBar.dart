@@ -92,11 +92,12 @@ class _HomeState extends State<navigationBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        
         currentIndex: _selected,
         onTap: _Tapped,
         showSelectedLabels: true,
         showUnselectedLabels: false,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.orange[100],
         elevation:0,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home,),label: 'Home',),

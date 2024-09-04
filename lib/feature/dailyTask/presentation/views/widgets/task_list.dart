@@ -20,15 +20,22 @@ class TaskList extends StatelessWidget {
             final isDone = appCubit.isDone(task2.name);
 
             return CheckboxListTile(
-              title: Row(
+              
+              title: Column(
                 children: [
-                  Text(task2.name),
-                  //Icon(task.icon)
+                  Row(
+                    children: [
+                      Text(task2.name),
+                      //Icon(task.icon)
+                    ],
+                  ),
+                  const Divider(color: Colors.brown,)
                 ],
               ),
               value: isDone,
               onChanged: (value) {
                 appCubit.toggleDone(task2.name);
+                
               },
             );
           },
@@ -37,34 +44,3 @@ class TaskList extends StatelessWidget {
     );
   }
 }
-
-/*import 'package:animals/feature/DailyTask/data/Task.dart';
-import 'package:flutter/material.dart';
-
-class TaskList extends StatefulWidget {
-  const TaskList({super.key});
-
-  @override
-  State<TaskList> createState() => _TaskListState();
-}
-
-class _TaskListState extends State<TaskList> {
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: Tasks.length,
-      itemBuilder: (context, index) {
-        return CheckboxListTile(
-          title: Text(Tasks[index].name),
-          value: Tasks[index].done,
-          onChanged: (value) {
-            setState(() {
-              Tasks[index].done = value ?? false;
-            });
-          },
-        );
-      },
-    );
-  }
-}
-*/

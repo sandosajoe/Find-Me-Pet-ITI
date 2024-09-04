@@ -6,7 +6,7 @@ void image_bigger(BuildContext context, String imagePath) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        contentPadding: EdgeInsets.all(7),
+        contentPadding: const EdgeInsets.all(7),
         content: Image.asset(
           imagePath,
           fit: BoxFit.cover,
@@ -16,7 +16,7 @@ void image_bigger(BuildContext context, String imagePath) {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Text('Close',style: TextStyle(color: Colors.orange),),
+            child: const Text('Close',style: TextStyle(color: Colors.orange),),
           ),
         ],
       );

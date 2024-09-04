@@ -13,10 +13,7 @@ class Welcome2 extends StatelessWidget {
         children: [
           Container(
             margin:const EdgeInsets.only(top: 60),
-            // decoration: BoxDecoration(
-            //   color: Colors.deepOrange[100],
-            //   borderRadius: BorderRadius.circular(900)
-            // ),
+           
             child: Image.asset("images/splashScreen/e8b97dbdbf53cbf76ffed48ea00012b6-removebg-preview.png"),
           ),
           const SizedBox(height: 50,),
@@ -32,14 +29,12 @@ class Welcome2 extends StatelessWidget {
           ),
           const SizedBox(height: 30,),
           Container(
-            margin: EdgeInsets.only(bottom: 20,left: 220,top: 50),
+            margin: const EdgeInsets.only(bottom: 20,left: 220,top: 50),
            // width: 40,
             child: Row(
               children: [
                 Image.asset("images/splashScreen/swipe.png" ,height: 25,width: 25,),
-                Container(
-                  //width: 40,
-                  child: Text("swipe left",style: Fonts.textStyle3,))
+                const Text("swipe left",style: Fonts.textStyle3,)
               ],
             ),
           )

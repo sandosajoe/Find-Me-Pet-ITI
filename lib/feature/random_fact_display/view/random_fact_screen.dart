@@ -1,3 +1,4 @@
+import 'package:find_me_iti/drawer_screen.dart';
 import 'package:find_me_iti/feature/random_fact_display/data/api_service.dart';
 import 'package:find_me_iti/feature/random_fact_display/manager/fact_bloc.dart';
 import 'package:find_me_iti/feature/random_fact_display/manager/fact_state.dart';
@@ -21,9 +22,9 @@ class RandomFactScreen extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Colors.orange.shade300,
-                  Colors.orange.shade500,
-                  Colors.orange.shade700,
+                  Colors.deepOrange.shade100,
+                  Colors.deepOrange.shade200,
+                  Colors.deepOrange.shade300,
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -31,6 +32,7 @@ class RandomFactScreen extends StatelessWidget {
             ),
           ),
         ),
+        drawer: const Drawer(child: DrawerScreen(),),
         body: Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -38,11 +40,10 @@ class RandomFactScreen extends StatelessWidget {
                 Colors.white,
                 Colors.orange.shade100,
                 Colors.orange.shade200,
-                Colors.orange.shade300,
-                Colors.orange.shade400,
-                Colors.orange.shade600,
-                Colors.orange.shade800,
-                Colors.orange.shade900,
+                Colors.deepOrange.shade100,
+                Colors.deepOrange.shade300,
+               
+                
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -54,7 +55,7 @@ class RandomFactScreen extends StatelessWidget {
               child: BlocBuilder<FactBloc, FactState>(
                 builder: (context, state) {
                   if (state is LoadingState) {
-                    return const CircularProgressIndicator();
+                    return  CircularProgressIndicator(color: Colors.orange[900],);
                   } else if (state is ScucessState) {
                     return Card(
                       elevation: 5,
@@ -71,10 +72,10 @@ class RandomFactScreen extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.orange.shade800,
+                                color: Colors.deepOrange.shade400,
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Text(
                               state.fact,
                               style:const TextStyle(
@@ -88,13 +89,13 @@ class RandomFactScreen extends StatelessWidget {
                               onPressed: () {
                                 context.read<FactBloc>().fetchFact(); 
                               },
-                              child: Text('Generate New Fact',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.orange,
+                                backgroundColor: Colors.deepOrange.shade400,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                               ),
+                              child: const Text('Generate New Fact',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                             ),
                           
                             Image.asset(

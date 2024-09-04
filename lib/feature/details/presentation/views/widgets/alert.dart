@@ -6,7 +6,7 @@ void added(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        contentPadding: EdgeInsets.all(0),
+        contentPadding: const EdgeInsets.all(0),
         content: Container(
           padding: const EdgeInsets.all(20),
           decoration: const BoxDecoration(
@@ -59,7 +59,7 @@ void added(BuildContext context) {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: Text('Close',style: TextStyle(color: Colors.red),),
+            child: const Text('Close',style: TextStyle(color: Colors.red),),
           ),
         ],
       );

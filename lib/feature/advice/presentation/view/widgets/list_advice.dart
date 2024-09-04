@@ -29,7 +29,9 @@ class ListAdvice extends StatelessWidget {
             child: ListTile(
               leading: CircleAvatar(
                 radius: 20,
-                backgroundImage: AssetImage(imageList[index]),
+                backgroundColor: Colors.deepOrange[200],
+                child: Text(countList[index],style: const TextStyle(fontWeight: FontWeight.bold),),
+             
               ),
               title: Text(
                 adviceList[index],

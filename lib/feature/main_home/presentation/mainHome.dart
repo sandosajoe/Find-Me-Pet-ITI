@@ -1,3 +1,7 @@
+
+
+//////////////////bl
+
 import 'package:find_me_iti/feature/main_home/presentation/widgets/animalListView.dart';
 import 'package:flutter/material.dart';
 
@@ -10,29 +14,66 @@ class MainHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Center(
-          child: Container(
-            height: 67,
-            width: double.maxFinite,
-            child: Image.asset(
-              'images/splashScreen/photo_2024-07-22_03-57-10-removebg-preview.png', // Replace with the path to your image asset
-              // height: 45.0,width: 45,
+       appBar: AppBar(
+          title:const  Text(
+            "Browse Pet Details",
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.deepOrange.shade100,
+                  Colors.deepOrange.shade200,
+                  Colors.deepOrange.shade300,
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
             ),
           ),
         ),
-        backgroundColor: Colors.white,
-      ),
+      // appBar: AppBar(
+      //   title: Center(
+      //     child: Container(
+      //       height: 67,
+      //       width: double.maxFinite,
+      //       child: Image.asset(
+      //         'images/splashScreen/photo_2024-07-22_03-57-10-removebg-preview.png', // Replace with the path to your image asset
+      //         // height: 45.0,width: 45,
+      //       ),
+      //     ),
+      //   ),
+      //   backgroundColor: Colors.white,
+      // ),
       drawer: Drawer(child: DrawerScreen(),),
-      body: Column(
-        children: [
-         // RandomFact(),
-          Expanded(child: AnimalListView()),
-        ],
+      body: Container(
+         decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.white,
+                Colors.orange.shade100,
+                Colors.orange.shade200,
+                Colors.deepOrange.shade100,
+                Colors.deepOrange.shade300,
+               
+                
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+        child: Column(
+          children: [
+           // RandomFact(),
+            Expanded(child: AnimalListView()),
+          ],
+        ),
       ),
     );
   }
 }
+/////////////bl
 
 // import 'package:find_me_iti/drawer_screen.dart';
 // import 'package:find_me_iti/feature/main_home/presentation/widgets/animalListView.dart';

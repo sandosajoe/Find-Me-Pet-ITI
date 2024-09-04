@@ -1,13 +1,6 @@
-final List<String> imageList = [
-  "assets/images/cats/1.jpg",
-  "assets/images/cats/2.jpg",
-  "assets/images/cats/3.jpg",
-  "images/advice/communication2.jpeg",
-  "images/advice/clean4.jpeg",
-  "images/advice/care4.jpeg",
-  "images/advice/clean4.jpeg",
-  "images/advice/house5.jpeg",
-  "images/advice/order4.jpeg",
-  "images/advice/clean4.jpeg",
-  //"images/advice/com3.jpeg",
+final List<String> countList = [
+
+  "1", "2", "3",
+  "4",
+  "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15",
 ];

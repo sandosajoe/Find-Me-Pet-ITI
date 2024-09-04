@@ -1,17 +1,16 @@
 import 'dart:async';
-
 import 'package:find_me_iti/feature/splash/splash_page_view.dart';
 import 'package:flutter/material.dart';
 
-class splashbody extends StatefulWidget {
-  const splashbody({super.key});
+class SplashBody extends StatefulWidget {
+  const SplashBody({super.key});
 
   @override
-  State<splashbody> createState() => _splashbodyState();
+  State<SplashBody> createState() => _SplashBodyState();
 }
 
 // ignore: camel_case_types
-class _splashbodyState extends State<splashbody> {
+class _SplashBodyState extends State<SplashBody> {
   @override
   void initState() {
     
@@ -21,9 +20,10 @@ class _splashbodyState extends State<splashbody> {
 void startTimer() {
     Timer(const Duration(seconds: 5), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) =>  SplashPageview()));
+          context, MaterialPageRoute(builder: (context) =>  SplashPageView()));
     });
   }
+  @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
@@ -34,7 +34,4 @@ void startTimer() {
     );
   }
 }
-
-
-
 

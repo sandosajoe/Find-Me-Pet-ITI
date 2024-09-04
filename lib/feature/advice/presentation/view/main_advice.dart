@@ -13,24 +13,43 @@ class MainAdvice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation:0,
-        flexibleSpace:const AppBarShape(),
-        title: const Text(
-          "Pet Advice",
-          style: Fonts.appbar
-        ),
-        centerTitle: true,
-
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.pets, color: Colors.white),
-            onPressed: () {
-            },
+          title:const  Text(
+            "For Your Pet ",
+            style: TextStyle(fontWeight: FontWeight.bold),
           ),
-        ],
-      ),
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.deepOrange.shade100,
+                  Colors.deepOrange.shade200,
+                  Colors.deepOrange.shade300,
+                ],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+            ),
+          ),
+        ),
       drawer: const Drawer(child: DrawerScreen(),),
-      body: const ListAdvice(),
+      body: Container(
+        
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.white,
+                Colors.orange.shade100,
+                Colors.orange.shade200,
+                Colors.deepOrange.shade100,
+                Colors.deepOrange.shade300,
+               
+                
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+        child: const ListAdvice()),
     );
   }
 }

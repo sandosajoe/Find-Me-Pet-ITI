@@ -23,6 +23,7 @@ abstract class Fonts {
   static const dogName = TextStyle(
       fontWeight: FontWeight.bold,
       color: Colors.black,
+      
       // fontFamily: "Schyler",
       fontSize: 16);
 
@@ -30,7 +31,7 @@ abstract class Fonts {
       fontWeight: FontWeight.w900,
       color: Color.fromARGB(179, 0, 0, 0),
       //fontFamily: "Schyler",
-      fontSize: 8.8
+      fontSize: 14
       //fontSize: 8.937
   );
 
@@ -41,9 +42,9 @@ abstract class Fonts {
       fontSize: 13);
 
   static const first = TextStyle(
-    color: Colors.black, fontWeight: FontWeight.bold, fontSize: 30, //fontFamily: 'Schyler',
+    color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20, //fontFamily: 'Schyler',
     shadows: [
-      Shadow(blurRadius: 5.0, color: Color.fromARGB(255, 94, 87, 87), offset: Offset(2, 2),)]);
+      Shadow(blurRadius: 1.4, color: Color.fromARGB(255, 94, 87, 87), offset: Offset(2, 1),)]);
 
   static const second = TextStyle(
       fontWeight: FontWeight.bold,fontSize: 17,color: Colors.black38);

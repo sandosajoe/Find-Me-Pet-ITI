@@ -18,5 +18,13 @@ List<Task> task = [
   Task(name: "Health Checks", icon: Icons.pets),
   Task(name: "Grooming", icon: Icons.pets),
   Task(name: "Comfort", icon: Icons.pets),
+  Task(name: "Clean the Enclosures"),
+  Task(name: "Socialize Animals"),
+  Task(name: "Monitor Food Supply"),
+  Task(name: "Groom the Animals"),
+  Task(name: "Exercise the Pets"),
+  Task(name: "Refresh Water Bowls")
+
+
 
 ];
