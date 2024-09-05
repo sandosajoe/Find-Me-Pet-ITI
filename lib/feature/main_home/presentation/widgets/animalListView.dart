@@ -1,4 +1,3 @@
-import 'package:find_me_iti/core/models/imageList.dart';
 import 'package:find_me_iti/feature/main_home/data/api_service.dart';
 import 'package:find_me_iti/feature/main_home/presentation/widgets/animalCard.dart';
 import 'package:flutter/material.dart';
@@ -13,11 +12,11 @@ class AnimalListView extends StatelessWidget {
           if (snapshot.hasData) {
             var list = snapshot.data!;
             return ListView.builder(
-              itemCount: list.length,
+                itemCount: list.length,
                 itemBuilder: (context, index) => AnimalCard(
-                   // imagePath: list[index].image,
-                    imagePath: animals[index],
-                    dogType: list[index].type,
+                   imagePath: list[index].image,
+                  //  imagePath: animals[index],
+                    dogType: list[index].type.toString(),
                     dogBarking: list[index].barking.toString(),
                     dogEnergy: list[index].energy.toString(),
                     minLife: list[index].minLife.toString(),
@@ -36,6 +35,6 @@ class AnimalListView extends StatelessWidget {
           }
         });
 
- 
+
   }
 }

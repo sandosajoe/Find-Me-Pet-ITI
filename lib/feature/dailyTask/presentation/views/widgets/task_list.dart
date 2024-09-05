@@ -26,13 +26,13 @@ class TaskList extends StatelessWidget {
                   Row(
                     children: [
                       Text(task2.name),
-                      //Icon(task.icon)
                     ],
                   ),
-                  const Divider(color: Colors.brown,)
+                   Divider(color: Colors.deepOrange.shade300,)
                 ],
               ),
               value: isDone,
+              activeColor: Colors.deepOrange[300],
               onChanged: (value) {
                 appCubit.toggleDone(task2.name);
                 

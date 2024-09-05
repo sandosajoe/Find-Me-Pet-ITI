@@ -1,15 +1,29 @@
+
 import 'package:find_me_iti/core/styles/styles.dart';
-import 'package:find_me_iti/feature/details/presentation/views/detailBody.dart';
+import 'package:find_me_iti/feature/details/presentation/views/screen2_home.dart';
+import 'package:find_me_iti/feature/main_home/presentation/widgets/image_bigger.dart';
 import 'package:flutter/material.dart';
-import 'image_bigger.dart';
 
 class AnimalCard extends StatelessWidget {
-  final String imagePath, dogType, dogBarking, dogEnergy , minLife,maxLife,goodWStrangers;
+  final String imagePath,
+      dogType,
+      dogBarking,
+      dogEnergy,
+      minLife,
+      maxLife,
+      goodWStrangers;
   final bool choosen;
 
-  const AnimalCard({super.key, required this.imagePath, required this.dogType, required this.dogBarking, required this.dogEnergy, required this.minLife, required this.maxLife, required this.goodWStrangers, required this.choosen});
-
-
+  const AnimalCard(
+      {super.key,
+      required this.imagePath,
+      required this.dogType,
+      required this.dogBarking,
+      required this.dogEnergy,
+      required this.minLife,
+      required this.maxLife,
+      required this.goodWStrangers,
+      required this.choosen});
 
   @override
   Widget build(BuildContext context) {
@@ -45,14 +59,12 @@ class AnimalCard extends StatelessWidget {
                   onTap: () {
                     image_bigger(context, imagePath);
                   },
-                  child: Image.asset(
+                 
+                  child: Image.network(
                     imagePath,
                     fit: BoxFit.contain,
+                    
                   ),
-                  // child: Image.network(
-                  //   "https://api-ninjas.com/images/dogs/estrela_mountain_dog.jpg",
-                  //   fit: BoxFit.contain,
-                  // ),
                 ),
               ),
             ),
@@ -101,16 +113,22 @@ class AnimalCard extends StatelessWidget {
             const SizedBox(
               width: 10,
             ),
-            // Move the icon here to keep it on the right
+            
             InkWell(
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (_) {
-                  return DetailBody(dogName: dogType, imagePath: imagePath, minLife: minLife,maxLife: maxLife,goodWS: goodWStrangers,);
+                  return MainDetails(
+                    dogName: dogType,
+                    imagePath: imagePath,
+                    minLife: minLife,
+                    maxLife: maxLife,
+                    goodWS: goodWStrangers,
+                  );
                 }));
               },
-              child: const Padding(
-                padding: EdgeInsets.only(right: 15),
-                child: Icon(Icons.info_rounded, size: 28, color: Colors.orange),
+              child:  Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: Icon(Icons.info_rounded, size: 28, color: Colors.deepOrange[300]),
               ),
             ),
           ],

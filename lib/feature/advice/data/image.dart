@@ -1,6 +1,19 @@
-final List<String> countList = [
+final List<String> imageList = [
 
-  "1", "2", "3",
-  "4",
-  "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15",
+"lib/images/advice/1.jpg",
+"lib/images/advice/2.jpg",
+"lib/images/advice/3.jpg",
+"lib/images/advice/4.jpg",
+"lib/images/advice/5.jpg",
+"lib/images/advice/6.jpg",
+"lib/images/advice/7.jpg",
+"lib/images/advice/8.jpg",
+"lib/images/advice/9.jpg",
+"lib/images/advice/1.jpg",
+"lib/images/advice/2.jpg",
+"lib/images/advice/5.jpg",
+"lib/images/advice/6.jpg",
+"lib/images/advice/7.jpg",
+"lib/images/advice/5.jpg",
+"lib/images/advice/6.jpg",
 ];

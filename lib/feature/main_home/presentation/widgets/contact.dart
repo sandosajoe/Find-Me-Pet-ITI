@@ -1,4 +1,6 @@
 
+import 'package:find_me_iti/core/styles/app_bar_shape.dart';
+import 'package:find_me_iti/core/styles/body_colors.dart';
 import 'package:flutter/material.dart';
 
 class Contact extends StatelessWidget {
@@ -13,36 +15,26 @@ class Contact extends StatelessWidget {
             "Contact",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.deepOrange.shade100,
-                  Colors.deepOrange.shade200,
-                  Colors.deepOrange.shade300,
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-            ),
-          ),
+          flexibleSpace: const AppBarStyle()
+       
         ),
       body:  Container(
-         decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.white,
-                Colors.orange.shade100,
-                Colors.orange.shade200,
-                Colors.deepOrange.shade100,
-                Colors.deepOrange.shade300,
+         decoration:GradientDecoration.gradientBoxDecoration,
+        //  BoxDecoration(
+        //     gradient: LinearGradient(
+        //       colors: [
+        //         Colors.white,
+        //         Colors.orange.shade100,
+        //         Colors.orange.shade200,
+        //         Colors.deepOrange.shade100,
+        //         Colors.deepOrange.shade300,
                
                 
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
+        //       ],
+        //       begin: Alignment.topLeft,
+        //       end: Alignment.bottomRight,
+        //     ),
+        //   ),
         child: Column(
             children: [
            

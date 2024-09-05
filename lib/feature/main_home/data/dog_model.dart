@@ -3,8 +3,8 @@ class Dog {
   final String type;
   final int barking;
   final int energy;
-  final int minLife;
-  final int maxLife;
+  final double minLife;
+  final double maxLife;
   final int goodWithStrangers;
 
   factory Dog.fromJson(Map<String, dynamic> jsonData) {

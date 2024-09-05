@@ -52,15 +52,17 @@ class ContinueToApp extends StatelessWidget {
                 onTap: () {
                  Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (_) {
-                    return const navigationBar();
+                    return  NavigationBarr();
                   }));
                 },
                 child: const Center(
                     child: Text(
                   "continue to app",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ))),
-          )
+                ))
+                ),
+          ),
+         
 
          
         ],

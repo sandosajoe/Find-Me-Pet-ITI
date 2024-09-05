@@ -1,3 +1,5 @@
+import 'package:find_me_iti/core/styles/app_bar_shape.dart';
+import 'package:find_me_iti/core/styles/body_colors.dart';
 import 'package:flutter/material.dart';
 
 class AboutOrganization extends StatelessWidget {
@@ -11,36 +13,11 @@ class AboutOrganization extends StatelessWidget {
             "About Us",
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.deepOrange.shade100,
-                  Colors.deepOrange.shade200,
-                  Colors.deepOrange.shade300,
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-            ),
-          ),
+          flexibleSpace:const AppBarStyle(),
+        
         ),
       body:  Container(
-        decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.white,
-                Colors.orange.shade100,
-                Colors.orange.shade200,
-                Colors.deepOrange.shade100,
-                Colors.deepOrange.shade300,
-               
-                
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-          ),
+        decoration: GradientDecoration.gradientBoxDecoration,
         child: const Column(
           children: [
             Padding(
@@ -71,22 +48,7 @@ class AboutOrganization extends StatelessWidget {
             
               
             
-            // Center(
-            //     child: InkWell(
-            //         onTap: () {
-            //           Navigator.push(context, MaterialPageRoute(builder: (_) {
-            //             return AnimalListView();
-            //           }));
-            //         },
-            //         child: Text(
-            //           "Go Back",
-            //           style: TextStyle(
-            //               color: Colors.black,
-            //               fontSize: 18,
-            //               fontWeight: FontWeight.bold,
-            //               decoration: TextDecoration.underline,
-            //               decorationColor: Colors.black),
-            //         ))),
+    
           ],
         ),
       

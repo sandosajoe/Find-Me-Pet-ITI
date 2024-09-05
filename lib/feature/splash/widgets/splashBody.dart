@@ -18,7 +18,7 @@ class _SplashBodyState extends State<SplashBody> {
     startTimer();
   }
 void startTimer() {
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 7), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) =>  SplashPageView()));
     });

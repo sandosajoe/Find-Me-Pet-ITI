@@ -2,7 +2,6 @@
 import 'package:find_me_iti/feature/advice/data/advice.dart';
 import 'package:find_me_iti/feature/advice/data/image.dart';
 import 'package:flutter/material.dart';
-
 class ListAdvice extends StatelessWidget {
   const ListAdvice({super.key});
 
@@ -22,16 +21,14 @@ class ListAdvice extends StatelessWidget {
                   color: Colors.grey.withOpacity(0.5),
                   spreadRadius: 5,
                   blurRadius: 7,
-                  offset: const Offset(0, 3), // changes position of shadow
+                  offset: const Offset(0, 3), 
                 ),
               ],
             ),
             child: ListTile(
               leading: CircleAvatar(
                 radius: 20,
-                backgroundColor: Colors.deepOrange[200],
-                child: Text(countList[index],style: const TextStyle(fontWeight: FontWeight.bold),),
-             
+                backgroundImage: AssetImage(imageList[index]),
               ),
               title: Text(
                 adviceList[index],
